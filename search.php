@@ -1,0 +1,1 @@
+../common/search.php
