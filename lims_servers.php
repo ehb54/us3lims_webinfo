@@ -9,11 +9,6 @@
 include 'config.php';
 
 // Log into db
-if ( preg_match( "/PASSW_/", $dbpasswd ) )
-{  // map new_us3user password
-  $mp_cmd = exec( "ls ~us3/scripts/map_password" );
-  $dbpasswd = exec( "$mp_cmd PASSW_NU PW" );
-}
 $link = mysqli_connect( $dbhost, $dbusername, $dbpasswd, $dbname ) 
         or die("Could not connect to database server.");
 
