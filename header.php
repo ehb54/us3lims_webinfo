@@ -55,16 +55,18 @@ Released      : 8/1/2010
 HTML;
 
    include 'topmenu.php';
-?>
+echo<<<HTML
 </div>
 <!-- Begin page content -->
 <div id='page'>
    <div id='sidebar' style='padding-bottom:30em;'>
      <a href="index.php">Welcome!</a>
-     <a href='http://uslims3.aucsolutions.com/uslims3_newlims/request_new_instance.php'>
+     <a href='http://$org_site/uslims3_newlims/request_new_instance.php'>
         Request New LIMS</a>
      <a href="partners.php">Partners</a>
      <a href="contacts.php">Contacts</a>
      <a href="mailto:demeler@gmail.com">Webmaster</a>
    </div>
+HTML;
+?>
 
