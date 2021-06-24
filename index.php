@@ -23,7 +23,9 @@ $query  = "SELECT institution, dbname, location " .
 $result = mysqli_query( $link, $query )
           or die( "Query failed : $query<br />\n" . mysqli_error($link));
 
-$instance_text = "<ol>\n";
+$instance_text = "<h1 class=\"title\">Welcome to the " . $org_name . "</h1>\n"
+               . "<h4>Below please find the link to your institution&rsquo;s"
+               . " <b><i>UltraScan III LIMS Portal:</i></b></h4>\n<ol>";
 while ( list( $instance, $db, $location ) = mysqli_fetch_array( $result ) )
 { // Build instance-link lines for this LIMS server
   if ( $instance == "CAUMA3" || $instance == "cauma3d" )  continue;
@@ -38,9 +40,6 @@ include 'header.php';
 
 echo <<<HTML
 <div id='content'>
-  <h1 class="title">Welcome to the UltraScan III LIMS Portal...</h1>
-
-  <h4>Below please find the link to your institution&rsquo;s <b><i>UltraScan III LIMS Portal:</i></b></h4>
 
   $instance_text
 
