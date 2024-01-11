@@ -19,6 +19,7 @@ $query  = "SELECT institution, dbname, location " .
           "FROM metadata " .
           "WHERE status = 'completed' " .
           "AND dbhost LIKE '$mdbhost' " .
+          "AND dbname != 'uslims3_Demo' " .
           "ORDER BY UPPER( institution ) ";
 $result = mysqli_query( $link, $query )
           or die( "Query failed : $query<br />\n" . mysqli_error($link));
