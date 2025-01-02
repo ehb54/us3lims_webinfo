@@ -33,9 +33,10 @@ $instance_text .= "<p><a href='http://uslims3.latrobe.edu.au/index.php'>";
 $instance_text .= "Links to institutions in or near Australia, using the LaTrobe LIMS/DB server</a></p><p/>";
 $instance_text .= "<p><a href='http://vm1584.kaj.pouta.csc.fi/index.php'>";
 $instance_text .= "Links to institutions in or near Finland, using the CSC LIMS/DB server</a></p><p/>";
+$instance_text .= "<p><a href='http://uslims-ca.uleth.ca/index.php'>";
+$instance_text .= "Links to institutions in Canada</a></p><p/>";
 $instance_text .= "<p><a href='http://uslims.uleth.ca/index.php'>";
-$instance_text .= "Links to institutions in or near Canada, using the Lethbridge LIMS/DB server</a></p><p/>";
-
+$instance_text .= "Links to the Canadian Center for Hydrodynamics</a></p><p/>";
 
 // Now write out index
 
