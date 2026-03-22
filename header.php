@@ -63,9 +63,7 @@ echo<<<HTML
      <a href="index.php">Welcome!</a>
      <a href='http://$org_site/uslims3_newlims/request_new_instance.php'>
         Request New LIMS</a>
-     <a href="partners.php">Partners</a>
      <a href="contacts.php">Contacts</a>
-     <a href="mailto:demeler@gmail.com">Webmaster</a>
    </div>
 HTML;
 ?>
