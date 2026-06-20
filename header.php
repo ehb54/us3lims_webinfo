@@ -45,7 +45,7 @@ Released      : 8/1/2010
 
 <body >
 <!-- begin header -->
-<div id="header" style='text-align:left;'> 
+<div id="header" class='text-left'> 
 
    <table class='noborder'>
    <tr><td><img src='images/USLIMS3-banner.png' alt='USLims 3 banner' /></td>
@@ -59,7 +59,7 @@ echo<<<HTML
 </div>
 <!-- Begin page content -->
 <div id='page'>
-   <div id='sidebar' style='padding-bottom:30em;'>
+   <div id='sidebar' class='pb-30em'>
      <a href="index.php">Welcome!</a>
      <a href='http://$org_site/uslims3_newlims/request_new_instance.php'>
         Request New LIMS</a>
