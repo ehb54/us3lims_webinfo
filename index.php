@@ -30,7 +30,7 @@ $instance_text = "<h1 class=\"title\">Welcome to the " . $org_name . "</h1>\n"
 while ( list( $instance, $db, $location ) = mysqli_fetch_array( $result ) )
 { // Build instance-link lines for this LIMS server
   if ( $instance == "CAUMA3" || $instance == "cauma3d" )  continue;
-  $instance_text .= "  <li><a href='http://$org_site/$db'>$instance</a>" .
+  $instance_text .= "  <li><a href='https://$org_site/$db'>$instance</a>" .
                     " ($location)</li>\n";
 }
 $instance_text .= "</ol>\n";
@@ -47,7 +47,7 @@ echo <<<HTML
   <h4><a href='http://uslims3.aucsolutions.com/lims_servers.php'>
         Show Links to All LIMS Servers</a></h4>
   
-  <h4><a href='http://$org_site/uslims3_newlims/request_new_instance.php'>
+  <h4><a href='https://$org_site/uslims3_newlims/request_new_instance.php'>
         Request a new UltraScan III LIMS Instance</a></h4>
   
 </div>
