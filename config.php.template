@@ -6,7 +6,9 @@
 
 $org_name     = 'UltraScan III LIMS';
 $org_site     = 'uslims.uleth.ca';
-$cfgfile      = exec( "ls ~us3/lims/.us3lims.ini" );
+// No exec(): SELinux denies httpd_t a shell, which left $cfgfile empty.
+$us3pwentry   = function_exists( 'posix_getpwnam' ) ? posix_getpwnam( 'us3' ) : false;
+$cfgfile      = ( $us3pwentry ? $us3pwentry['dir'] : '/home/us3' ) . '/lims/.us3lims.ini';
 $configs      = parse_ini_file( $cfgfile, true );
 
 $dbusername   = 'new_us3user';  # the name of the MySQL user
