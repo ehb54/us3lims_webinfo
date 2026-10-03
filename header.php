@@ -38,7 +38,7 @@ echo<<<HTML
 <div id='page'>
    <div id='sidebar' class='pb-30em'>
      <a href="index.php">Welcome!</a>
-     <a href='http://$org_site/uslims3_newlims/request_new_instance.php'>
+     <a href='/uslims3_newlims/request_new_instance.php'>
         Request New LIMS</a>
      <a href="contacts.php">Contacts</a>
    </div>
