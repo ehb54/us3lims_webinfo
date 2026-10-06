@@ -44,7 +44,7 @@ echo <<<HTML
 
   $instance_text
 
-  <h4><a href='http://uslims3.aucsolutions.com/lims_servers.php'>
+  <h4><a href='https://uslims3.aucsolutions.com/lims_servers.php'>
         Show Links to All LIMS Servers</a></h4>
   
   <h4><a href='https://$org_site/uslims3_newlims/request_new_instance.php'>
