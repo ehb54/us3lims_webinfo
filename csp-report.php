@@ -55,8 +55,12 @@ if ( is_array( $report ) )
   // from browsers, so there is no proxy header worth trusting here.
   $client = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : 'unknown';
 
+  // JSON_INVALID_UTF8_SUBSTITUTE: the byte-limit substr() above can cut a
+  // multi-byte character in half, and without this json_encode() returns
+  // false for the whole array over one bad field, logging the line with no
+  // payload at all rather than the other, valid fields.
   error_log( 'CSP violation from ' . $client . ': '
-             . json_encode( $kept, JSON_UNESCAPED_SLASHES ) );
+             . json_encode( $kept, JSON_UNESCAPED_SLASHES | JSON_INVALID_UTF8_SUBSTITUTE ) );
 }
 
 http_response_code( 204 );
