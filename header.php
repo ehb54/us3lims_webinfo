@@ -16,8 +16,8 @@ echo<<<HTML
   <title>UltraScan Analysis Software</title>
   <meta name="description" content="Website for the UltraScan data analysis software">
   <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="/common/css/common.css">
+  <link rel="stylesheet" href="/common/css/index.css">
 </head>
 
 <body >
@@ -31,7 +31,7 @@ echo<<<HTML
 
 HTML;
 
-   include 'topmenu.php';
+   include $common_dir . 'topmenu.php';
 echo<<<HTML
 </div>
 <!-- Begin page content -->
