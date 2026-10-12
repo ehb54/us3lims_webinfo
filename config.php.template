@@ -16,6 +16,9 @@ $dbpasswd     = $configs[ 'newus3' ][ 'password' ];  # the password for the MySQ
 $dbname       = 'newus3';  # the name of the database
 $dbhost       = 'localhost'; # the host on which MySQL runs, generally localhost
 
-$common_dir   = '/var/www/html/common/';  # shared header/footer/topmenu partials, not reached via symlink
+// us3lims-roles lays common out under /srv/www/htdocs/, not /var/www/html/
+// (that path only matches the Docker dev container) -- round-12 blocker,
+// dbinst#57/newinst#27/webinfo#17.
+$common_dir   = '/srv/www/htdocs/common/';  # shared header/footer/topmenu partials, not reached via symlink
 ?>
 
