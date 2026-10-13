@@ -4,8 +4,8 @@
 
 */
 
-$org_name     = 'UltraScan III LIMS';
-$org_site     = 'uslims.uleth.ca';
+$org_name     = 'CHANGE-ME: your organization\'s name';
+$org_site     = 'CHANGE-ME.example.org';
 // No exec(): SELinux denies httpd_t a shell, which left $cfgfile empty.
 $us3pwentry   = function_exists( 'posix_getpwnam' ) ? posix_getpwnam( 'us3' ) : false;
 $cfgfile      = ( $us3pwentry ? $us3pwentry['dir'] : '/home/us3' ) . '/lims/.us3lims.ini';
@@ -15,5 +15,10 @@ $dbusername   = 'new_us3user';  # the name of the MySQL user
 $dbpasswd     = $configs[ 'newus3' ][ 'password' ];  # the password for the MySQL user
 $dbname       = 'newus3';  # the name of the database
 $dbhost       = 'localhost'; # the host on which MySQL runs, generally localhost
+
+// us3lims-roles lays common out under /srv/www/htdocs/, not /var/www/html/
+// (that path only matches the Docker dev container) -- round-12 blocker,
+// dbinst#57/newinst#27/webinfo#17.
+$common_dir   = '/srv/www/htdocs/common/';  # shared header/footer/topmenu partials, not reached via symlink
 ?>
 
