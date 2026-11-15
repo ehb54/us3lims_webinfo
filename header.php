@@ -16,13 +16,13 @@ echo<<<HTML
   <title>UltraScan Analysis Software</title>
   <meta name="description" content="Website for the UltraScan data analysis software">
   <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="/common/css/common.css">
+  <link rel="stylesheet" href="/common/css/index.css">
 </head>
 
 <body >
 <!-- begin header -->
-<div id="header" style='text-align:left;'> 
+<div id="header" class='text-left'> 
 
    <table class='noborder'>
    <tr><td><img src='images/USLIMS3-banner.png' alt='USLims 3 banner' /></td>
@@ -31,14 +31,14 @@ echo<<<HTML
 
 HTML;
 
-   include 'topmenu.php';
+   include $common_dir . 'topmenu.php';
 echo<<<HTML
 </div>
 <!-- Begin page content -->
 <div id='page'>
-   <div id='sidebar' style='padding-bottom:30em;'>
+   <div id='sidebar' class='pb-30em'>
      <a href="index.php">Welcome!</a>
-     <a href='http://$org_site/uslims3_newlims/request_new_instance.php'>
+     <a href='/uslims3_newlims/request_new_instance.php'>
         Request New LIMS</a>
      <a href="contacts.php">Contacts</a>
    </div>
