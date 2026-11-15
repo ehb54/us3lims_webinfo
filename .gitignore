@@ -1,0 +1,7 @@
+# Per-deployment config; contains DB credentials.
+/config.php
+/us3/
+
+.DS_Store
+.idea/
+*.log
